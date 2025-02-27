@@ -7,6 +7,6 @@ from constants import Links
 def driver():
     driver = webdriver.Firefox()
     driver.implicitly_wait(10)
-    driver.get(Links.main_link)
+    driver.get(Links.MAIN_LINK)
     yield driver
     driver.quit()

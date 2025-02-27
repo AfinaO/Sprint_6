@@ -1,5 +1,4 @@
 import allure
-
 import testdata
 from page_objects.main_page import MainPage
 from conftest import driver
@@ -24,4 +23,3 @@ class TestMainPageFaq:
         main_page.wait_faq_answer(index)
         cur_answer = main_page.get_faq_answer_text(index)
         assert cur_answer == answer, f'Неверный текст ответа. Ожидаем: {answer}, пришло: {cur_answer}'
-

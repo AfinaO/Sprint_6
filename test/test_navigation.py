@@ -17,4 +17,4 @@ class TestNavigation:
         main_page.click_on_yandex_logo()
         main_page.switch_to_next_tab()
         cur_url = main_page.get_page_url()
-        assert('dzen.ru' in cur_url), f'Ожидаем наличие "dzen.ru" в URL, пришел URL: {cur_url}"'
+        assert ('dzen.ru' in cur_url), f'Ожидаем наличие "dzen.ru" в URL, пришел URL: {cur_url}"'

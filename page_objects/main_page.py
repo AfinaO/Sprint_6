@@ -6,23 +6,23 @@ from page_objects.base_page import BasePage
 class MainPage(BasePage):
     @allure.step('Ждем появления верхней кнопки Заказать и кликаем по нему')
     def go_to_order_page(self):
-        self.wait_visibility(MainPageLocators.header_order_button)
-        self.click_on(MainPageLocators.header_order_button)
+        self.wait_visibility(MainPageLocators.HEADER_ORDER_BUTTON)
+        self.click_on(MainPageLocators.HEADER_ORDER_BUTTON)
 
     @allure.step('Ждем появления лого Самокат и кликаем по нему')
     def click_on_scooter_logo(self):
-        self.wait_visibility(MainPageLocators.scooter_logo)
-        self.click_on(MainPageLocators.scooter_logo)
+        self.wait_visibility(MainPageLocators.SCOOTER_LOGO)
+        self.click_on(MainPageLocators.SCOOTER_LOGO)
 
     @allure.step('Проверяем, загрузилась ли главная страница')
     def check_if_main_page_displayed(self):
-        self.wait_visibility(MainPageLocators.main_page_header)
-        return self.check_displaying(MainPageLocators.main_page_header)
+        self.wait_visibility(MainPageLocators.MAIN_PAGE_HEADER)
+        return self.check_displaying(MainPageLocators.MAIN_PAGE_HEADER)
 
     @allure.step('Ждем появления лого Яндекса и кликаем по нему')
     def click_on_yandex_logo(self):
-        self.wait_visibility(MainPageLocators.yandex_logo)
-        self.click_on(MainPageLocators.yandex_logo)
+        self.wait_visibility(MainPageLocators.YANDEX_LOGO)
+        self.click_on(MainPageLocators.YANDEX_LOGO)
 
     @allure.step('Скроллим до раздела Важные вопросы')
     def scroll_to_question(self, index):
@@ -47,4 +47,3 @@ class MainPage(BasePage):
     @allure.step('Получаем текст ответа')
     def get_faq_answer_text(self, index):
         return self.get_text(MainPageLocators.answers_locators[index])
-

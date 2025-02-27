@@ -13,7 +13,7 @@ class BasePage:
 
     @allure.step('Закрыть окно подтверждения использования куков, если оно есть')
     def close_cookie_popup(self):
-        cookie_button = self.get_element(MainPageLocators.cookie_button_locator)
+        cookie_button = self.get_element(MainPageLocators.COOKIE_BUTTON_LOCATOR)
         if cookie_button.is_displayed:
             cookie_button.click()
 
@@ -44,7 +44,7 @@ class BasePage:
 
     @allure.step('Получить URL страницы')
     def get_page_url(self):
-        WebDriverWait(self.driver, 6).until(EC.presence_of_element_located(MainPageLocators.page_title))
+        WebDriverWait(self.driver, 6).until(EC.presence_of_element_located(MainPageLocators.PAGE_TITLE))
         return self.driver.current_url
 
     @allure.step('Проверить отображение элемента')
